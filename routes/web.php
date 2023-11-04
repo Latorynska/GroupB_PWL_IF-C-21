@@ -28,4 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/lihat',[CobaController::class,'test']);
+
 require __DIR__.'/auth.php';
+
+Route::view('/if','lihat.index');
